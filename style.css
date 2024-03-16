@@ -11,6 +11,7 @@
 body {
     background: black;
     font-family: "Poppins", sans-serif;
+    color: aqua;
   }
 
 
@@ -27,11 +28,14 @@ header{
     font-weight: 600;
     font-size: 27px;
     cursor: pointer;
+    animation: sliderleft 1s ease forwards;
+    opacity: 0;
+
 
 
 }
 
-.navbar a{
+.Navbar a{
     text-decoration: none;
     color: white;
     padding:0px 16px;
@@ -41,6 +45,92 @@ header{
 
 }
 
-.navbar a: hover{
-    color: 
+.Navbar a:hover,
+.Navbar a.active {
+    color: #0ef;
+
 }
+
+.hero-container{
+    display:flex;
+    padding: 25px 10%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.info-side h3{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 10px 0;
+    letter-spacing: 1px;
+
+
+}
+
+
+.info-side h1{
+    font-size:  75px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.info-side h3 span{
+    color: #0ed;
+
+}
+
+.p{
+    line-height: 27px;
+    margin: 20px 0px 40px 0px;
+
+
+
+}
+
+.hero-img img{
+    width: 450px;
+
+}
+
+
+i{
+    position: relative;
+    border: 2px solid #0ef;
+    padding: 10px;
+    border-radius: 50%;
+    color: #0ef;
+    margin: 0px 8px;
+    transition: 0.3ms ;
+
+
+
+}
+
+i:hover{
+    box-shadow: 0 0 20px #0ef;
+
+}
+
+button{
+    background-color: #0ef;
+    margin-top: 50px;
+    padding: 20px 70px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 0 15px #0ef;
+
+
+}
+
+button:hover{
+    box-shadow: none;
+
+}
+
+
+
+@media 
