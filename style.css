@@ -92,7 +92,7 @@ i:hover{
 
 .project-card {
     width: calc(33.33% - 20px);
-    height: 350px;
+    height: 400px;
     margin-bottom: 20px;
     background-color: #333;
     padding: 20px;
