@@ -1,116 +1,84 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-    background: black;
+    background: rgb(24, 23, 23);
     font-family: "Poppins", sans-serif;
     color: aqua;
-  }
-
-
-header{
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
-    padding: 25px 10px;
-
-}
-
-.logo{
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 27px;
-    cursor: pointer;
-    animation: slideLeft 1s ease forwards;
-    opacity: 0;
-
-
-
-}
-
-.Navbar a{
-    display:inline-block;
-    text-decoration: none;
-    color: white;
-    padding:0px 16px;
-    font-weight: 600;
-    transition: 0.3s all;
-    animation: navMenu 1s ease forwards;
-    animation-delay: calc(.2s *var(--i));
-    opacity:0;
-
-
-
-
-}
-
-.Navbar a:hover,
-.Navbar a.active {
-    color: #0ef;
-
-}
-
-.hero-container{
-    display:flex;
-    padding: 25px 10%;
-    justify-content: center;
     align-items: center;
-
 }
 
-.info-side h3{
-    font-size: 30px;
-    font-weight: 700;
-    margin: 10px 0;
-    letter-spacing: 1px;
-
-
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-
-.info-side h1{
-    font-size:  75px;
-    font-weight: 700;
-    letter-spacing: 1px;
+nav ul li {
+    display: inline;
+    margin-right: 10px;
 }
 
-.info-side h3 span{
-    color: #0ed;
-
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
 }
 
-.part-1{
-    animation: part1 1s ease forwards;
-    animation-delay: 2s;
-    opacity: 0;
+section {
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
-
-.part-2{
-    animation: part2 1s ease forwards;
-    animation-delay: 2s;
-    opacity: 0;
-}
-.p{
-    line-height: 27px;
-    margin: 20px 0px 40px 0px;
-
-
-
+#home {
+    display: flex;
+    align-items: center;
+    background-image: url("sunset-1112644_1280.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
 }
 
-.hero-img img{
-    width: 450px;
-
+.home-content {
+    flex: 1;
 }
 
+.home-image {
+    width: 300px;
+    margin-left: 20px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #333;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
 
 i{
     position: relative;
@@ -130,79 +98,123 @@ i:hover{
 
 }
 
-button{
-    background-color: #0ef;
-    margin-top: 50px;
-    padding: 20px 70px;
+
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-card {
+    width: calc(33.33% - 20px);
+    height: 350px;
+    margin-bottom: 20px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 14px;
+}
+
+/* Add the following CSS code to your existing style.css file */
+
+#contact {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+#contact label {
+    font-size: 16px;
+    color: #333;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    width: 100%;
+    padding: 10px;
     border: none;
-    border-radius: 30px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: #333;
+}
+
+#contact textarea {
+    resize: vertical;
+}
+
+#contact input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s;
-    box-shadow: 0 0 15px #0ef;
-
-
 }
 
-button:hover{
-    box-shadow: none;
+#contact input[type="submit"]:hover {
+    background-color: #000;
+}
 
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+}
+
+.card {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card ul li {
+    margin-bottom: 5px;
 }
 
 
-
-@keyframes slideLeft{
-    0%{
-        transform: translateX(-100px);
-        opacity: 0;
-
-    }
-
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-
-    }
-}
-
-@keyframes navMenu{
-    0%{
-        transform: translateY(100px);
-        opacity: 0;
-
-    }
-
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-
-    }
-}
-
-@keyframes part1{
-    0%{
-        transform: translateY(100px);
-        opacity: 0;
-
-    }
-
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-
-    }
-}
-
-@keyframes part2{
-    0%{
-        transform: translateY(100px);
-        opacity: 0;
-
-    }
-
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-
-    }
-}
